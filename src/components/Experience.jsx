@@ -31,6 +31,35 @@ const experiences = [
     ],
     tags: ['AWS Glue', 'Amazon Redshift', 'Kinesis', 'Snowflake', 'dbt', 'Airflow', 'HIPAA', 'CloudWatch', 'Databricks'],
   },
+  {
+    company: 'United India Insurance Co. Ltd.',
+    location: 'Bengaluru, India',
+    period: 'Aug 2022 – Dec 2023',
+    role: 'GCP Data Engineer',
+    bullets: [
+      'Developed scalable ETL/ELT pipelines using Google Cloud Dataflow, Apache Beam, and BigQuery to process large insurance and financial datasets, enabling timely delivery for downstream analytics.',
+      'Built streaming architectures with Cloud Pub/Sub, Apache Kafka, Apache Pulsar, and Cloud Functions for low-latency fraud monitoring and real-time transaction processing.',
+      'Optimized BigQuery performance through partitioning, clustering, and query tuning, reducing query execution costs by 35% and improving performance by 60%.',
+      'Implemented ML workflows using TensorFlow, AI Platform, and BigQuery ML for fraud detection and customer risk scoring.',
+      'Automated deployment and orchestration using Docker, GKE, Jenkins, and Ansible for fault-tolerant, scalable data operations.',
+      'Designed interactive dashboards in Looker, Tableau, and Power BI to support risk management and operational analytics.',
+    ],
+    tags: ['GCP', 'BigQuery', 'Dataflow', 'Apache Beam', 'Pub/Sub', 'Kafka', 'BigQuery ML', 'GKE', 'Looker'],
+  },
+  {
+    company: 'Razorpay',
+    location: 'Bengaluru, India',
+    period: 'Apr 2021 – Jun 2022',
+    role: 'Data Engineer',
+    bullets: [
+      'Built cloud-native ETL pipelines on AWS (Glue, Lambda, Kinesis, S3, Redshift) for transactional and operational data delivery to downstream reporting systems.',
+      'Designed real-time streaming architectures using Kinesis Data Streams and event-driven serverless patterns for low-latency operational analytics.',
+      'Developed dbt transformation models and star/snowflake schema warehouses in Amazon Redshift, improving analytical query performance by 50%.',
+      'Automated data quality validation, monitoring, and alerting using CloudWatch and Lambda, reducing incident resolution time by 40%.',
+      'Designed anomaly detection workflows to identify operational inefficiencies, improving resource utilization by 25%.',
+    ],
+    tags: ['AWS Glue', 'Kinesis', 'Amazon Redshift', 'dbt', 'Lambda', 'CloudWatch', 'Snowflake Schema'],
+  },
 ]
 
 export default function Experience() {
