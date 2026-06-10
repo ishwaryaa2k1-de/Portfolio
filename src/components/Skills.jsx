@@ -1,91 +1,95 @@
 const skillGroups = [
   {
-    category: 'AI & Autonomous Agents',
-    icon: '🤖',
-    skills: [
-      'Agentforce (Agent Builder, Prompt Builder, Agent Actions)',
-      'Einstein Copilot',
-      'Einstein AI (Prediction Builder, NLP, GenAI)',
-      'Salesforce AI Platform',
-      'Retrieval-Augmented Generation (RAG)',
-    ],
-  },
-  {
-    category: 'Data & Analytics',
-    icon: '📊',
-    skills: [
-      'Salesforce Data Cloud',
-      'Data Streams & Identity Resolution',
-      'Calculated Insights & Activation',
-      'CRM Analytics / Tableau CRM',
-      'Data Graphs & Zero-Copy Data Federation',
-    ],
-  },
-  {
-    category: 'Industry Clouds',
-    icon: '☁️',
-    skills: [
-      'Financial Services Cloud (FSC)',
-      'Health Cloud (HL7/FHIR)',
-      'Consumer Goods Cloud',
-      'Communications Cloud (EPC, CPQ)',
-      'Order Management',
-    ],
-  },
-  {
-    category: 'OmniStudio',
-    icon: '⚡',
-    skills: [
-      'OmniScripts',
-      'FlexCards',
-      'DataRaptors (Extract/Load/Transform/Turbo)',
-      'Integration Procedures',
-      'Document Generation',
-    ],
-  },
-  {
-    category: 'Development',
+    category: 'Languages & Query',
     icon: '💻',
     skills: [
-      'Apex (Triggers, Batch, Queueable, REST)',
-      'Lightning Web Components (LWC)',
-      'Aura Components',
-      'Salesforce Flow & Platform Events',
-      'Change Data Capture (CDC) & GraphQL API',
+      'Python',
+      'SQL / Spark SQL',
+      'PySpark',
+      'Scala',
+      'Java',
+      'Snowflake SQL',
     ],
   },
   {
-    category: 'Integration',
-    icon: '🔗',
+    category: 'Cloud Platforms',
+    icon: '☁️',
     skills: [
-      'MuleSoft Anypoint Platform',
-      'REST / SOAP APIs',
-      'HL7/FHIR',
-      'Salesforce Connect & External Services',
-      'Event-Driven Architecture',
+      'AWS (Glue, Lambda, Kinesis, S3, Redshift, CloudWatch, CDK)',
+      'Microsoft Azure (ADF, Databricks, Synapse Analytics, DevOps, ML)',
+      'GCP (BigQuery, Dataflow, Pub/Sub, Cloud Functions, GKE)',
     ],
   },
   {
-    category: 'DevOps & Tools',
+    category: 'Big Data & Streaming',
+    icon: '⚡',
+    skills: [
+      'Apache Spark & PySpark',
+      'Apache Kafka',
+      'Apache Airflow',
+      'Apache Beam & Flink',
+      'Apache Pulsar',
+      'Delta Lake & Apache Iceberg',
+      'Hadoop / HDFS',
+    ],
+  },
+  {
+    category: 'Data Warehousing & Modeling',
+    icon: '🗄️',
+    skills: [
+      'Snowflake',
+      'Amazon Redshift',
+      'Azure Synapse Analytics',
+      'BigQuery',
+      'dbt (data build tool)',
+      'Star / Snowflake Schema & SCD Types',
+      'Medallion Architecture (Bronze / Silver / Gold)',
+    ],
+  },
+  {
+    category: 'DevOps & Orchestration',
     icon: '🛠️',
     skills: [
-      'Copado & Gearset',
-      'GitHub & Azure DevOps',
-      'Salesforce DevOps Center',
-      'Jenkins & SFDX',
-      'VS Code, Jira, Confluence',
+      'Apache Airflow',
+      'Docker & Kubernetes',
+      'Terraform & Ansible',
+      'GitHub Actions & Azure DevOps CI/CD',
+      'MLflow',
+      'AWS CDK',
+      'Jenkins',
+    ],
+  },
+  {
+    category: 'Data Quality & Governance',
+    icon: '🔍',
+    skills: [
+      'Great Expectations',
+      'dbt Tests & Data Lineage',
+      'HIPAA Compliance',
+      'Azure Purview',
+      'Data Catalog & Metadata Management',
+      'CloudWatch Monitoring & Alerting',
+    ],
+  },
+  {
+    category: 'Visualization & BI',
+    icon: '📊',
+    skills: [
+      'Power BI',
+      'Tableau',
+      'Looker',
+      'AWS QuickSight',
     ],
   },
 ]
 
 export default function Skills() {
   return (
-    <section id="skills" className="section section--alt">
+    <section id="skills" className="section">
       <div className="container">
-        <h2 className="section__title">
-          <span className="accent mono">02.</span> Technical Skills
-        </h2>
-        <p className="section__subtitle">2024 – 2026 focus areas</p>
+        <span className="section__label">02. Skills</span>
+        <h2 className="section__title">Technical Skills</h2>
+        <div className="section__divider" />
 
         <div className="skills__grid">
           {skillGroups.map((group) => (

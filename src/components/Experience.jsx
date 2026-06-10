@@ -1,63 +1,65 @@
 const experiences = [
   {
-    company: 'TIAA',
-    location: 'Charlotte, NC',
-    period: 'Nov 2024 – Present',
-    role: 'Senior Salesforce FSC Consultant',
+    company: 'Mastercard',
+    location: 'St. Louis, MO',
+    period: 'Jan 2026 – Present',
+    role: 'Senior Data Engineer',
     bullets: [
-      'Architected and delivered end-to-end Salesforce FSC implementation for a Fortune 100 financial services firm, enabling scalable client onboarding, household management, financial account tracking, and advisor workflows for 2,000+ financial advisors.',
-      'Built 15+ OmniStudio processes (OmniScripts, FlexCards, DataRaptors, Integration Procedures) automating client onboarding, loan origination, claims processing, and wealth management workflows — cutting manual processing time by 35%.',
-      'Developed Apex triggers, LWC components, Salesforce Flows, and Platform Events to automate customer lifecycle management, advisor task creation, and compliance alerts across 5 business units.',
-      'Integrated Salesforce FSC with core banking systems, policy administration platforms, and third-party financial providers via MuleSoft, REST, SOAP, and Salesforce Connect — supporting real-time account sync and transaction processing at scale.',
-      'Deployed Salesforce Data Cloud to unify structured and unstructured customer data across 10+ source systems; implemented identity resolution and calculated insights to power Agentforce AI agents for advisor and service team assistance.',
-      'Implemented Einstein AI and Agentforce to deliver AI-powered advisory recommendations, automated case routing, and proactive client alerts — improving service team response efficiency by 30%.',
-      'Led security architecture including role-based access, permission sets, sharing rules, and Shield encryption to meet SOX, FINRA, and GDPR compliance requirements.',
-      'Drove Agile ceremonies (sprint planning, retrospectives, story grooming) as technical lead, coordinating onshore and offshore teams across 3 time zones to deliver releases on schedule.',
+      'Designed and delivered enterprise-scale ETL/ELT pipelines using Azure Data Factory, Azure Databricks (Delta Lake), and Azure Synapse Analytics to process high-volume financial datasets, reducing reporting latency by 30%.',
+      'Built scalable batch and near-real-time data processing solutions using PySpark, Spark SQL, and Apache Airflow for pipeline orchestration, improving processing throughput and reliability.',
+      'Implemented data lakehouse architecture using Delta Lake and medallion (Bronze/Silver/Gold) patterns to standardize ingestion, transformation, and serving layers.',
+      'Engineered ingestion frameworks for structured and semi-structured data (JSON, XML, CSV, fixed-width), applying dbt transformation layers for consistent data modeling.',
+      'Integrated ML models into production pipelines using Azure Machine Learning and MLflow for fraud analytics and revenue forecasting.',
+      'Automated infrastructure provisioning with Terraform, AWS CDK, and Azure DevOps CI/CD, enabling zero-downtime deployments and full IaC coverage.',
+      'Designed executive KPI dashboards in Power BI, partnering with finance and analytics stakeholders to surface actionable operational insights.',
+      'Enforced data governance, lineage tracking, and data quality checks using Great Expectations and Azure Purview.',
     ],
-    tags: ['FSC', 'Agentforce', 'OmniStudio', 'Data Cloud', 'MuleSoft', 'Einstein AI', 'LWC', 'Apex'],
+    tags: ['Azure Data Factory', 'Databricks', 'Delta Lake', 'PySpark', 'Airflow', 'dbt', 'Terraform', 'Power BI', 'Azure Synapse'],
   },
   {
-    company: 'Sonata Software',
-    location: 'Texas (Remote)',
-    period: 'Sep 2021 – Oct 2023',
-    role: 'Salesforce Industry Cloud Consultant',
+    company: 'Anthem Elevance Health',
+    location: 'St. Louis, MO',
+    period: 'Feb 2025 – Dec 2025',
+    role: 'AWS Data Engineer',
     bullets: [
-      'Led Salesforce Consumer Goods Cloud implementation for a Top-10 CPG manufacturer — enabling visit planning, retail execution, inventory monitoring, and promotion management across 500+ field sales representatives.',
-      'Configured CG Cloud capabilities (Store Audits, Retail Execution, Account Insights, Promotion Management) that improved field sales productivity by 25% and in-store compliance tracking by 40%.',
-      'Developed 20+ OmniStudio components (OmniScripts, FlexCards, DataRaptors, Integration Procedures) to streamline merchandising activities, store visit workflows, and customer interaction capture.',
-      'Integrated Salesforce with SAP, Oracle ERP, POS systems, distributor platforms, and eCommerce applications via MuleSoft and REST APIs achieving near-real-time inventory synchronization across 3,000+ retail locations.',
+      'Architected cloud-native data pipelines with AWS Glue, Lambda, Kinesis, S3, and Amazon Redshift to deliver timely healthcare analytics and Medicaid patient reporting.',
+      'Built orchestrated ETL workflows using Apache Airflow, processing structured and semi-structured healthcare data (JSON, XML, flat files) with full reconciliation controls.',
+      'Developed dbt models on Snowflake and Amazon Redshift to standardize healthcare data marts, reducing report generation time by 40% for healthcare operations teams.',
+      'Created dimensional data models (star schema, SCD Type 2) in Azure Synapse Analytics and Databricks, enabling self-service reporting for clinical and operational analytics.',
+      'Ensured HIPAA-compliant data handling by implementing secure access controls, audit logging, encryption, and governance policies across all data assets.',
+      'Improved data pipeline reliability to 99.8% SLA by automating monitoring, alerting, and validation using CloudWatch, Lambda, and Great Expectations.',
     ],
-    tags: ['Consumer Goods Cloud', 'OmniStudio', 'MuleSoft', 'SAP Integration', 'REST APIs', 'Apex'],
+    tags: ['AWS Glue', 'Amazon Redshift', 'Kinesis', 'Snowflake', 'dbt', 'Airflow', 'HIPAA', 'CloudWatch', 'Databricks'],
   },
 ]
 
 export default function Experience() {
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section section--alt">
       <div className="container">
-        <h2 className="section__title">
-          <span className="accent mono">03.</span> Work Experience
-        </h2>
+        <span className="section__label">03. Experience</span>
+        <h2 className="section__title">Work Experience</h2>
+        <div className="section__divider" />
 
         <div className="experience__timeline">
-          {experiences.map((exp, i) => (
+          {experiences.map((exp) => (
             <div key={exp.company} className="exp-card fade-up">
               <div className="exp-card__header">
                 <div className="exp-card__meta">
                   <h3 className="exp-card__role">{exp.role}</h3>
                   <p className="exp-card__company">
-                    <span className="accent">{exp.company}</span>
-                    <span className="exp-card__separator"> · </span>
-                    <span className="exp-card__location">{exp.location}</span>
+                    <span className="exp-card__company-name">{exp.company}</span>
+                    <span style={{ color: 'var(--border)' }}>·</span>
+                    <span>{exp.location}</span>
                   </p>
                 </div>
-                <span className="exp-card__period mono accent">{exp.period}</span>
+                <span className="exp-card__period">{exp.period}</span>
               </div>
 
               <ul className="exp-card__bullets">
-                {exp.bullets.map((bullet, j) => (
-                  <li key={j}>
-                    <span className="accent exp-card__arrow">▹</span>
+                {exp.bullets.map((bullet, i) => (
+                  <li key={i}>
+                    <span className="exp-card__arrow">▹</span>
                     {bullet}
                   </li>
                 ))}

@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react'
 
 const links = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
+  { label: 'About',      href: '#about' },
+  { label: 'Skills',     href: '#skills' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Certifications', href: '#certifications' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact',    href: '#contact' },
 ]
 
 export default function Navbar() {
@@ -28,26 +26,23 @@ export default function Navbar() {
   return (
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <a className="navbar__logo" href="#hero" onClick={(e) => handleNavClick(e, '#hero')}>
-        <span className="accent">AG</span>
+        AG
       </a>
 
       <ul className={`navbar__links${menuOpen ? ' navbar__links--open' : ''}`}>
-        {links.map((link, i) => (
+        {links.map((link) => (
           <li key={link.label}>
             <a
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className="navbar__link"
             >
-              <span className="accent mono">0{i + 1}.</span> {link.label}
+              {link.label}
             </a>
           </li>
         ))}
         <li>
-          <a
-            href="mailto:ashwariya487@gmail.com"
-            className="btn btn--outline"
-          >
+          <a href="mailto:ishwaryaa2k1@gmail.com" className="btn btn--outline">
             Hire Me
           </a>
         </li>

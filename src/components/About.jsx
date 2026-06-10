@@ -1,51 +1,53 @@
 const stats = [
-  { value: '11+', label: 'Years Experience' },
-  { value: '2000+', label: 'Advisors Impacted' },
-  { value: '500+', label: 'Field Sales Reps' },
-  { value: '35+', label: 'OmniStudio Processes Built' },
+  { value: '4+',    label: 'Years of Experience' },
+  { value: '30%',   label: 'Pipeline Latency Reduced' },
+  { value: '99.8%', label: 'SLA Achieved' },
+  { value: '40%',   label: 'Faster Report Generation' },
 ]
 
 export default function About() {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section section--alt">
       <div className="container">
-        <h2 className="section__title">
-          <span className="accent mono">01.</span> About Me
-        </h2>
+        <span className="section__label">01. About</span>
+        <h2 className="section__title">About Me</h2>
+        <div className="section__divider" />
 
         <div className="about__grid">
           <div className="about__text fade-up">
             <p>
-              I&apos;m a <span className="accent">Senior Salesforce &amp; AI Industry Cloud Consultant</span> with
-              over 11 years of experience architecting and delivering enterprise Salesforce solutions
-              across Financial Services, Healthcare, Consumer Goods, and Communications industries.
+              I&apos;m a <strong style={{ color: 'var(--text)' }}>Senior Data Engineer</strong> with
+              4+ years of experience designing and delivering cloud-native data solutions across{' '}
+              <span className="accent">AWS, Azure, and GCP</span>. I specialize in building
+              end-to-end ETL/ELT pipelines, real-time streaming architectures, and scalable data
+              warehouse systems that empower data-driven decision-making.
             </p>
             <p>
-              My expertise spans <span className="accent">Agentforce &amp; Einstein AI</span>, enabling
-              AI-powered automation — from autonomous advisory recommendations and proactive client
-              alerts to Retrieval-Augmented Generation (RAG) workflows. I specialize in building
-              scalable platforms using <span className="accent">Salesforce Data Cloud</span>,
-              OmniStudio, Apex, LWC, and MuleSoft integrations.
+              My expertise spans{' '}
+              <span className="accent">Apache Spark, Kafka, Airflow, and dbt</span>, alongside
+              modern data lakehouse patterns using Delta Lake and Apache Iceberg. I&apos;m passionate
+              about Medallion Architecture, data quality governance, and building automated
+              infrastructure that teams can rely on at scale.
             </p>
             <p>
-              I lead cross-functional Agile teams across time zones, driving releases on schedule
-              while meeting <span className="accent">SOX, FINRA, GDPR, and HL7/FHIR</span> compliance
-              requirements. I&apos;m passionate about intelligent automation, real-time data activation,
-              and building scalable platform designs in SAFe environments.
+              I hold a <span className="accent">Master&apos;s in Management Information Systems</span>{' '}
+              from the University of Memphis (Dec 2025) and have delivered high-impact solutions at
+              Mastercard and Anthem Elevance Health — including HIPAA-compliant healthcare pipelines
+              and enterprise financial data platforms.
             </p>
 
             <div className="about__core-competencies">
               <h3>Core Competencies</h3>
               <div className="competency-grid">
                 {[
-                  'FSC / Health Cloud / CGC',
-                  'Agentforce & Einstein AI',
-                  'OmniStudio Suite',
-                  'Salesforce Data Cloud',
-                  'MuleSoft / REST / SOAP / FHIR',
-                  'LWC / Apex / Flow',
-                  'CI/CD: Copado, Gearset',
-                  'Agile / Scrum / SAFe',
+                  'Cloud-Native Data Pipelines',
+                  'ETL/ELT & Data Modeling',
+                  'Real-Time Streaming (Kafka)',
+                  'Data Lakehouse Architecture',
+                  'dbt & Dimensional Modeling',
+                  'HIPAA & Data Governance',
+                  'Infrastructure as Code',
+                  'Power BI & BI Dashboards',
                 ].map((comp) => (
                   <span key={comp} className="competency-tag">
                     <span className="accent">▹</span> {comp}
@@ -58,7 +60,7 @@ export default function About() {
           <div className="about__stats fade-up">
             {stats.map((stat) => (
               <div key={stat.label} className="stat-card">
-                <span className="stat-card__value accent">{stat.value}</span>
+                <span className="stat-card__value">{stat.value}</span>
                 <span className="stat-card__label">{stat.label}</span>
               </div>
             ))}
